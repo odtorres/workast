@@ -1,0 +1,24 @@
+{
+  "name": "workast",
+  "version": "1.0.0",
+  "description": " Create a RESTful API that would allow an application to manage users and articles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "to fill"
+  },
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "author": "Oscar Daniel Torres Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
