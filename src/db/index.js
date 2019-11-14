@@ -20,6 +20,16 @@ exports.dbAccess = function (collection) {
       const result = await db.collection(collection).find({})
       return await result.toArray()
     },
+    findAllBy: async function findAll(query) {
+      const db = await getDb()
+      const result = await db.collection(collection).find(query)
+      return await result.toArray()
+    },
+    findById: async function findById(_id) {
+      const db = await getDb()
+      const result = await db.collection(collection).findOne({ _id: new mongodb.ObjectID(_id) })
+      return await result
+    },
     insert: async function insert(obj) {
       const db = await getDb()
       const result = await db
