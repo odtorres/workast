@@ -8,7 +8,7 @@ exports.findAll = async function findAll() {
     return await dbArticle.findAll()
 }
 
-exports.findAllByTag = async function findAll(tags = []) {
+exports.findAllByTag = async function findAllByTag(tags = []) {
     //$all in case of and 
     //$in in case of or
     return await dbArticle.findAllBy({ tags: { "$all": tags } })
