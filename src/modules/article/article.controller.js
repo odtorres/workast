@@ -1,3 +1,4 @@
+const config = require("../../config")
 const ArticleService = require('./article.service')
 
 exports.insert = async function (req, res) {
@@ -5,7 +6,7 @@ exports.insert = async function (req, res) {
         const article = await ArticleService.insert(req.body);
         return res.status(200).json({ "success": true, title: article.title });
     } catch (e) {
-        return res.status(500).json(e.message);
+        return res.status(config.HTTP_STATUS_CODE["Bad Request"]).json(e.message);
     }
 }
 
@@ -14,7 +15,7 @@ exports.remove = async function (req, res) {
         const count = await ArticleService.remove(req.params.id);
         return res.status(200).json({ "success": true, "count": count });
     } catch (e) {
-        return res.status(500).json(e);
+        return res.status(config.HTTP_STATUS_CODE["Bad Request"]).json(e.message);
     }
 }
 
@@ -25,7 +26,7 @@ exports.update = async function (req, res) {
             "success": true, "update": object
         });
     } catch (e) {
-        return res.status(500).json(e);
+        return res.status(config.HTTP_STATUS_CODE["Bad Request"]).json(e.message);
     }
 }
 
