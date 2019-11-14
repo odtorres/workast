@@ -3,6 +3,10 @@ const user = require("./user.model")
 const collection = "user"
 const dbUser = clientDb.dbAccess(collection)
 
+exports.findById = async function findById(id) {
+    return await dbUser.findById(id)
+}
+
 exports.findAll = async function findAll() {
     return await dbUser.findAll()
 }
