@@ -1,5 +1,5 @@
 const clientDb = require("../../db")
-const user = require("./user.model")
+const Model = require("./user.model")
 const collection = "user"
 const dbUser = clientDb.dbAccess(collection)
 
@@ -12,7 +12,8 @@ exports.findAll = async function findAll() {
 }
 
 exports.insert = async function insert(user) {
-    const result = await dbUser.insert(user)
+    const validUser = Model.User(user)
+    const result = await dbUser.insert(validUser)
     return result.ops[0]
 }
 
