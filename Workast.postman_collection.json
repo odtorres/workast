@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "db356050-e24b-4022-b398-4e6e4cfb6a2f",
+		"name": "Workast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Elsa\",\n\"avatar\":\"Elsa Avatar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/user?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"5dcd09e5db88a8728c110506\",\n    \"title\": \"My title 3\",\n    \"text\": \"This is the content 3\",\n    \"tags\": [\n            \"Nodejs\",\n            \"MongoDb\",\n            \"Man\"\n        ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/article?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"article"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Article Tags",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tags\": [\"Nodejs\",\"MongoDb\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/article/find/tags?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"article",
+						"find",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"avatar\":\"Big avatar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/user/5dcd09e5db88a8728c110506?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5dcd09e5db88a8728c110506"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"123 testing testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/article/5dcde4f041c939720c85b489?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"article",
+						"5dcde4f041c939720c85b489"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v1/user/5dcd0a52db88a8728c110507?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5dcd0a52db88a8728c110507"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v1/article/5dcde5c141c939720c85b48a?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"article",
+						"5dcde5c141c939720c85b48a"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v1/user?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/v1/article?token=5CD4ED173E1C95FE763B753A297D5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"article"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5CD4ED173E1C95FE763B753A297D5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
