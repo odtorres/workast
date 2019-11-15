@@ -39,3 +39,6 @@ Please indicate in the API documentation where in the request we should place th
 3. npm install
 4. Rename ".env.copy" to ".env"
 5. node server
+
+## Postman
+1. Import Workast.postman_collection.json in your postman
